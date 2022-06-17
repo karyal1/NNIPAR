@@ -3,14 +3,13 @@
   - The NN models predict three parameters: IPAR just below the surface(IPAR(0),K1 and K2).
   - The input parameters to open ocean NN model are windspeed,chla,sza,aod,ssa,aa and ozone.
   - The input parameters to coastal waters NN model are windspeed,chla,sza,aod,ssa,aa,ozone,B(670),a(490),bb(490).
-* Dependency (needs install and update)
+* Dependency (needs install and imports)
   - Tensorflow
-  - Keras
   - pandas
   - numpy
-  - h5py
-  - scikit-learn
+  - pickle
   - os
+  - fnmatch
   - sys
 * Using the package
   - Download the package. All files must be in the same directory.
