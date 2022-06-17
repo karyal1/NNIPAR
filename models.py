@@ -45,7 +45,7 @@ def nnopen(oinput):
     
 
     df=pd.DataFrame(a1,columns=['Wind', 'Chla', 'SZA', 'AOD', 'SSA','AA','Ozone',r'IPAR(0)','K1','K2'])
-    if fm.fnmatch(directory,'test_models.py'):
+    if fm.fnmatch(directory,'testmodels.py'):
         a4=[[130.8275146,0.040552534,0.398340821],[1325.746582,0.241900459,0.200544834],[1065.5,0.492925197,0.37158072]]
         df1=pd.DataFrame(a4,columns=['Ref(IPAR(0))','Ref(K1)','Ref(K2)'])
         df2=pd.concat([df, df1], axis=1)
@@ -85,7 +85,7 @@ def nncoastal(cinput):
             a3=cinput[i,:].tolist()+a2.tolist()
             a1.append(a3)
     df=pd.DataFrame(a1,columns=['Wind', 'Chla', 'SZA', 'AOD', 'SSA','AA','Ozone','B(670)','a(490)','bb(490)',r'IPAR(0)','K1','K2'])
-    if fm.fnmatch(directory,'test_models.py'):
+    if fm.fnmatch(directory,'testmodels.py'):
         a4=[[144.3686676,-0.004072354,1.782362103],[1389.579712,0.241554797,2.311629534],[833.2581787,0.747719944,3.318435907]]
         df1=pd.DataFrame(a4,columns=['Ref(IPAR(0))','Ref(K1)','Ref(K2)'])
         df2=pd.concat([df, df1], axis=1)
