@@ -1,11 +1,19 @@
-* Model
-
-Usemodels.py file contains both models.
-
-The necessary packages to install and import are Tensorflow, sklearn (Pickle), Numpy and H5py.
-'s1nniparopen.h5' is Neural network model for open ocean and 's1tnniparcoastal.h5' is for coastal waters.
-The pickle files with name including 'inputscalar' contains normalizing scalars from input parameters in training input dataset, and with name including 'outputstd' are standard deviation of output parameter in training dataset. These files are used during the prediction.
-usemodels.py gives the prediction of IPAR(0^-),K_1 and K_2 and hence the vertical profile of IPAR under different atmospheric and oceanic condition.
-Users can change the values of input parameters with in the given range as required
-To test the models performance in user environment, please check the benchmark test cases and their prediction results as listed in 'Test cases to check model performance in users' environment.docx' file.
-All files must be in the same directory.
+* Algorithm Package
+- This package contains two neural network (NN) models one for open ocean and another for coastal waters.
+- The NN models predict three parameters: IPAR just below the surface(IPAR(0),K1 and K2).
+- The input parameters to open ocean NN model are windspeed,chla,sza,aod,ssa,aa and ozone.
+- The input parameters to coastal waters NN model are windspeed,chla,sza,aod,ssa,aa,ozone,B(670),a(490),bb(490).
+* Dependency (needs install and update)
+  - Tensorflow
+  - Keras
+  - pandas
+  - numpy
+  - h5py
+  - scikit-learn
+  - os
+  - sys
+* Using the package
+- Download the package. All files must be in the same directory.
+- To check models' performance in users environment run 'testmodels.py' script using command: python3 testmodels.py. The output from this run will have two csv files: 'test_open.csv' and 'test_coastal.csv' for open ocean model and coastal waters model respectively. CSV files will have the predicted values of IPAR(0),K1 and K2 along with their reference values Ref(IPAR(0)),Ref(K1) and Ref(K2) respectively. If predicted values match with reference values, then application of models in user's environment can be confirmed.
+- To use models for prediction run 'usemodels.py'. This script gives different csv files according to user's need.
+- Modify input parameters in usemodels.py file to get desired output. It has mainly three functions: NN model for open ocean, NN model for coastal waters, function to give vertical profile of IPAR. 
