@@ -19,3 +19,7 @@
   -  Specifying input parameters follows two ways: one gives prediction on individual case and other gives simultaneous prediction on group of cases.
   - 'usemodels.py' has  three  functions: NN model for open ocean, NN model for coastal waters, function to give vertical profile of IPAR.
   - Users can use desired scenarios and function and comment out others which are not needed.
+
+
+Citation
+This work has been published in Applied optics:Aryal, K., Zhai, P. W., Gao, M., & Franz, B. A. (2022). Instantaneous photosynthetically available radiation models for ocean waters using neural networks. Applied Optics, 61(33), 9985-9995.
